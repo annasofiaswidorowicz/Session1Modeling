@@ -1,7 +1,4 @@
 #OOP and classes
-from socket import send_fds
-
-
 class Point:
     """
     Simple class to represent a point in 2D space
