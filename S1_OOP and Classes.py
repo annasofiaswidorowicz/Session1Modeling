@@ -1,4 +1,4 @@
-#OOP and classes
+                            #OOP and classes
 class Point:
     """
     Simple class to represent a point in 2D space
@@ -60,4 +60,3 @@ points = [p1, p2, p3, p4]
 print(points)
 points.sort()
 print(points)
-
