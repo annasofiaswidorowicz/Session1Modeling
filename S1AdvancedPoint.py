@@ -28,8 +28,20 @@ class AdvancedPoint(ColorPoint):
     @classmethod
     def add_color(cls, color):
         cls.COLORS.append(color) #add new color to the list
+    @staticmethod
+    def distance_2_points(p1, p2):
+        return((p1.x - p2.x)**2 + (p1.y - p2.y)**2)**0.5
 
+    @staticmethod #"factory" method because it allows to create from a dictionary
+    def from_dict(d):
+        x = d["x"]
+        y = d["y"]
+        color = d["color"]
+        return AdvancedPoint(x, y, color)
 
+point_dict = {"x": 1, "y": 2, "color": "red"}
+p0 = AdvancedPoint.from_dict({"x": 1, "y": 2, "color": "red"})
+print(p0)
 p1 = AdvancedPoint(1, 2, "red")
 print(p1)
 p2 = AdvancedPoint(3, 4, "white")
@@ -40,6 +52,7 @@ print(p2)
 AdvancedPoint.add_color("coral")
 p3 = AdvancedPoint(1, 2, "coral")
 print(p3)
+print(AdvancedPoint.distance_2_points(p1, p3))
 
 
 
